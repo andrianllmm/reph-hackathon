@@ -29,7 +29,7 @@ export function ChatWidget() {
             <XIcon className="size-4" />
           </Button>
         </div>
-        <Chat className="h-[min(36rem,calc(100vh-10rem))] p-3" />
+        <Chat className="h-[min(26rem,calc(100vh-12rem))] p-3" />
       </div>
       <Button
         size="icon"

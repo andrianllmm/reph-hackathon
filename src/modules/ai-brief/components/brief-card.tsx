@@ -25,9 +25,9 @@ export async function BriefSection({ customerId, state }: { customerId: string; 
         </CardHeader>
         <CardContent className="space-y-5 text-sm">
           <p className="text-base leading-relaxed">{b.summary}</p>
-          <div className="flex items-center gap-2">
-            <span className="font-medium">Likely driver</span>
-            <Badge>{b.likely_driver}</Badge>
+          <div className="flex items-start gap-2">
+            <span className="shrink-0 font-medium">Likely driver</span>
+            <Badge className="h-auto shrink whitespace-normal rounded-lg text-left">{b.likely_driver}</Badge>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <div>

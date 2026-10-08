@@ -19,14 +19,14 @@ export function FilterBar({ options }: { options: Opts }) {
   };
 
   return (
-    <div className="flex flex-wrap items-end gap-3">
+    <div className="grid grid-cols-2 items-end gap-3 sm:grid-cols-[repeat(4,minmax(0,1fr))_auto]">
       {(Object.keys(options) as (keyof Opts)[]).map((key) => {
         const items = [{ value: "all", label: "All" }, ...options[key].map((o) => ({ value: o, label: o }))];
         return (
           <div key={key} className="flex flex-col gap-1.5">
             <Label className="capitalize">{key}</Label>
             <Select items={items} value={params.get(key) ?? "all"} onValueChange={(v) => set(key, v)}>
-              <SelectTrigger className="w-40">
+              <SelectTrigger className="w-full">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
