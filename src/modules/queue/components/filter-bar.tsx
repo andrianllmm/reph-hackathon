@@ -15,7 +15,7 @@ export function FilterBar({ options }: { options: Opts }) {
     const next = new URLSearchParams(params.toString());
     if (!v || v === "all") next.delete(key);
     else next.set(key, v);
-    router.push(`/?${next.toString()}`);
+    router.push(`/queue?${next.toString()}`);
   };
 
   return (
@@ -40,7 +40,7 @@ export function FilterBar({ options }: { options: Opts }) {
           </div>
         );
       })}
-      <Button variant="ghost" onClick={() => router.push("/")}>
+      <Button variant="ghost" onClick={() => router.push("/queue")}>
         Reset
       </Button>
     </div>
